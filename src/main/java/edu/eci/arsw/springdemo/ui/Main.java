@@ -17,8 +17,8 @@ import edu.eci.arsw.springdemo.GrammarChecker;
 public class Main {
 
     public static void main(String[] args) {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
-        GrammarChecker gc = ac.getBean(GrammarChecker.class);
+        ApplicationContext sc = new ClassPathXmlApplicationContext("applicationContext.xml");
+        GrammarChecker gc = sc.getBean(GrammarChecker.class);
         System.out.println(gc.check("la la la "));
     }
 
