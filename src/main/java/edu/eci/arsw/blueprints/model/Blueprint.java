@@ -1,4 +1,3 @@
-
 package edu.eci.arsw.blueprints.model;
 
 import java.util.ArrayList;
@@ -6,42 +5,79 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-
+/**
+ * Representa un plano con un autor, un nombre y una lista de puntos.
+ */
 public class Blueprint {
 
-    private String author=null;
-    
-    private List<Point> points=null;
-    
-    private String name=null;
-            
-    public Blueprint(String author,String name,Point[] pnts){
-        this.author=author;
-        this.name=name;
-        points=Arrays.asList(pnts);
-    }
-         
-    public Blueprint(String author, String name){
-        this.name=name;
-        points=new ArrayList<>();
+    private String author = null;
+    private List<Point> points = null;
+    private String name = null;
+
+    /**
+     * Construye un nuevo Blueprint con el autor, nombre y puntos especificados.
+     *
+     * @param author el autor del plano
+     * @param name el nombre del plano
+     * @param pnts los puntos del plano
+     */
+    public Blueprint(String author, String name, Point[] pnts) {
+        this.author = author;
+        this.name = name;
+        points = Arrays.asList(pnts);
     }
 
+    /**
+     * Construye un nuevo Blueprint con el autor y nombre especificados.
+     *
+     * @param author el autor del plano
+     * @param name el nombre del plano
+     */
+    public Blueprint(String author, String name) {
+        this.author = author;
+        this.name = name;
+        points = new ArrayList<>();
+    }
+
+    /**
+     * Constructor por defecto para Blueprint.
+     */
     public Blueprint() {
-    }    
-    
+    }
+
+    /**
+     * Devuelve el nombre del plano.
+     *
+     * @return el nombre del plano
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Devuelve el autor del plano.
+     *
+     * @return el autor del plano
+     */
     public String getAuthor() {
         return author;
     }
-    
+
+    /**
+     * Devuelve la lista de puntos en el plano.
+     *
+     * @return la lista de puntos
+     */
     public List<Point> getPoints() {
         return points;
     }
-    
-    public void addPoint(Point p){
+
+    /**
+     * Añade un punto al plano.
+     *
+     * @param p el punto a añadir
+     */
+    public void addPoint(Point p) {
         this.points.add(p);
     }
 
@@ -74,18 +110,14 @@ public class Blueprint {
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (this.points.size()!=other.points.size()){
+        if (this.points.size() != other.points.size()) {
             return false;
         }
-        for (int i=0;i<this.points.size();i++){
-            if (this.points.get(i)!=other.points.get(i)){
+        for (int i = 0; i < this.points.size(); i++) {
+            if (!this.points.get(i).equals(other.points.get(i))) {
                 return false;
             }
         }
-        
         return true;
     }
-    
-    
-    
 }

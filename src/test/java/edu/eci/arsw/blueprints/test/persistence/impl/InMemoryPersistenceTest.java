@@ -5,23 +5,28 @@
  */
 package edu.eci.arsw.blueprints.test.persistence.impl;
 
+import java.util.Set;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
+import org.junit.Before;
+import org.junit.Test;
+
 import edu.eci.arsw.blueprints.model.Blueprint;
 import edu.eci.arsw.blueprints.model.Point;
 import edu.eci.arsw.blueprints.persistence.BlueprintNotFoundException;
 import edu.eci.arsw.blueprints.persistence.BlueprintPersistenceException;
 import edu.eci.arsw.blueprints.persistence.impl.InMemoryBlueprintPersistence;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
  * @author hcadavid
  */
 public class InMemoryPersistenceTest {
+    private InMemoryBlueprintPersistence ibpp;
     
-    @Test
+    @org.junit.jupiter.api.Test
     public void saveNewAndLoadTest() throws BlueprintPersistenceException, BlueprintNotFoundException{
         InMemoryBlueprintPersistence ibpp=new InMemoryBlueprintPersistence();
 
@@ -69,6 +74,35 @@ public class InMemoryPersistenceTest {
         
     }
 
+    @Before
+    public void setUp() {
+        ibpp = new InMemoryBlueprintPersistence();
+    }
+
+    @Test
+    public void shouldGetBlueprint() throws BlueprintNotFoundException {
+        Blueprint bp = ibpp.getBlueprint("_authorname_", "_bpname_");
+        assertNotNull(bp);
+        assertEquals("_authorname_", bp.getAuthor());
+        assertEquals("_bpname_", bp.getName());
+    }
+
+    @Test(expected = BlueprintNotFoundException.class)
+    public void shouldThrowExceptionWhenBlueprintNotFound() throws BlueprintNotFoundException {
+        ibpp.getBlueprint("author1", "nonexistent");
+    }
+
+    @Test
+    public void shouldGetBlueprintsByAuthor() throws BlueprintNotFoundException {
+        Set<Blueprint> blueprints = ibpp.getBlueprintsByAuthor("_authorname_");
+        assertNotNull(blueprints);
+        assertEquals(1, blueprints.size());
+    }
+
+    @Test(expected = BlueprintNotFoundException.class)
+    public void shouldThrowExceptionWhenNoBlueprintsForAuthor() throws BlueprintNotFoundException {
+        ibpp.getBlueprintsByAuthor("nonexistent");
+    }
 
     
 }
