@@ -4,7 +4,23 @@
 
 # Componentes y conectores - Parte I.
 
+##Descripción de la Aplicación
+
 La aplicación permite crear, guardar y recuperar planos, y está diseñada con una arquitectura que separa el modelo de datos, la persistencia y los servicios. Las pruebas unitarias aseguran que la funcionalidad de persistencia se comporte según lo esperado.
+
+### Instalación 📦
+
+Realice los siguientes pasos para clonar el proyecto en su máquina local.
+
+```
+git clone https://github.com/Pau993/TallerARSW04.git
+cd TallerARSW04
+git checkout main
+mvn clean compile
+```
+
+## Como abrir los proyectos
+
 
 Modelo de Clases
 
