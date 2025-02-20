@@ -51,6 +51,24 @@ Luego, agregaremos las pruebas correspondientes en InMemoryPersistenceTest para 
 
 ![image](https://github.com/user-attachments/assets/61b0dc27-e5fd-422a-b252-2a344c5481f8)
 
+3. Para la creacion del programa mediante sprint, se genera el BlueprintApp, con todas las funcionalidades solicitadas:
+
+![image](https://github.com/user-attachments/assets/c07469e7-f3f5-4232-bff3-a85fb4579dac)
+
+Asi se pueden registrar planos, consultar planos, registrar especificos.
+
+4. Para el filtrado se generan clases que reduzcan el tamaño de los planos, que quiten los datos redundantes o submuestreen.
+
+![image](https://github.com/user-attachments/assets/88ef5cc0-1567-4801-ba01-2e204923072d)
+
+![image](https://github.com/user-attachments/assets/e72449b4-3c95-4d6c-b6bf-e16b9a9e0bbd)
+
+5. Se realizaron los test respectivos para las clases:
+
+![image](https://github.com/user-attachments/assets/c60bfe86-01a3-4ada-9376-f86ae99bf6f8)
+
+![image](https://github.com/user-attachments/assets/4803314d-a3f9-4ff0-b52e-1f1d2c569d93)
+
 
 ## Autores ✒️
 **Paula Natalia Paez Vega* **Manuel Felipe Barrera Barrera* - *Initial work* - [Paulinguis993](https://github.com/Paulinguis993)
