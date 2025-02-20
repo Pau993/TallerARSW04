@@ -52,8 +52,9 @@ Luego, agregaremos las pruebas correspondientes en InMemoryPersistenceTest para 
 ![image](https://github.com/user-attachments/assets/61b0dc27-e5fd-422a-b252-2a344c5481f8)
 
 
-3.
+## Autores ✒️
+**Paula Natalia Paez Vega* **Manuel Felipe Barrera Barrera* - *Initial work* - [Paulinguis993](https://github.com/Paulinguis993)
 
-4. 
+## Licencia 📄
 
-5. 
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
