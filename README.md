@@ -4,14 +4,11 @@
 
 # Componentes y conectores - Parte I.
 
-El ejercicio se debe traer terminado para el siguiente laboratorio (Parte II).
+La aplicación permite crear, guardar y recuperar planos, y está diseñada con una arquitectura que separa el modelo de datos, la persistencia y los servicios. Las pruebas unitarias aseguran que la funcionalidad de persistencia se comporte según lo esperado.
 
 #### Middleware- gestión de planos.
 
-
-## Antes de hacer este ejercicio, realice [el ejercicio introductorio al manejo de Spring y la configuración basada en anotaciones](https://github.com/ARSW-ECI/Spring_LightweightCont_Annotation-DI_Example).
-
-En este ejercicio se va a construír un modelo de clases para la capa lógica de una aplicación que permita gestionar planos arquitectónicos de una prestigiosa compañia de diseño. 
+Modelo de Clases
 
 ![](img/ClassDiagram1.png)
 
@@ -24,6 +21,7 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
 	* Agregar la configuración de Spring.
 	* Configurar la aplicación -mediante anotaciones- para que el esquema de persistencia sea inyectado al momento de ser creado el bean 'BlueprintServices'.
 
+![image](https://github.com/user-attachments/assets/11f44903-9ab4-4293-800b-26e5ff9f0bb2)
 
 2. Complete los operaciones getBluePrint() y getBlueprintsByAuthor(). Implemente todo lo requerido de las capas inferiores (por ahora, el esquema de persistencia disponible 'InMemoryBlueprintPersistence') agregando las pruebas correspondientes en 'InMemoryPersistenceTest'.
 
