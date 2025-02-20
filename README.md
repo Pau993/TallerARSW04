@@ -4,7 +4,7 @@
 
 # Componentes y conectores - Parte I.
 
-##Descripción de la Aplicación
+## Descripción de la Aplicación
 
 La aplicación permite crear, guardar y recuperar planos, y está diseñada con una arquitectura que separa el modelo de datos, la persistencia y los servicios. Las pruebas unitarias aseguran que la funcionalidad de persistencia se comporte según lo esperado.
 
@@ -20,6 +20,10 @@ mvn clean compile
 ```
 
 ## Como abrir los proyectos
+
+En la rama Parte_1 encontramos el proyecto BluePrints y en el Main encontramos GrammarChecker
+
+https://github.com/user-attachments/assets/da91f1ef-c262-4949-bd10-a76ecd8c4d99
 
 
 Modelo de Clases
