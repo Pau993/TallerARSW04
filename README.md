@@ -1,4 +1,4 @@
-# Componentes y conectores - Parte I.
+# Componentes y conectores - Pre-parte I.
 
 es una demostración de la inyección de dependencias y la inversión de control utilizando el framework Spring. La estructura del proyecto sigue el patrón estándar de un proyecto Maven con una configuración de Spring.
 
