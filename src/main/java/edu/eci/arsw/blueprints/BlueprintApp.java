@@ -13,6 +13,7 @@ public class BlueprintApp {
     public static void main(String[] args) {
 
         // Cargar el contexto de Spring
+        @SuppressWarnings("resource")
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
         // Obtener la instancia de BlueprintsServices gestionada por Spring
